@@ -13,7 +13,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public final static String RECORD_BODY = "text_body";
     public final static String RECORD_TIME = "create_time";
     public final static String NOTICE_TIME ="notice_time";
-    public final static String RECORD_CLASSIFY="classify";
+
 
 
     public DatabaseHelper(Context context) {
@@ -26,7 +26,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 RECORD_TITLE+" VARCHAR(30)," +
                 RECORD_BODY+" TEXT," +
                 RECORD_TIME+" DATETIME NOT NULL," +
-                RECORD_CLASSIFY+" TEXT," +
                 NOTICE_TIME+" DATETIME " +
                 ")");
     }

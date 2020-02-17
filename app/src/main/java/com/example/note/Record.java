@@ -6,7 +6,7 @@ public class Record {
     private String textBody;
     private String createTime;
     private String noticeTime;
-    private String classify;
+
 
     public Integer getId() {
         return id;
@@ -32,13 +32,6 @@ public class Record {
         this.textBody = textBody;
     }
 
-    public String getClassify() {
-        return classify;
-    }
-
-    public void setClassify(String classify) {
-        this.classify = classify;
-    }
 
     public String getCreateTime() {
         return createTime;
@@ -61,7 +54,6 @@ public class Record {
         return "Record{" +
                 "id=" + id +
                 ", titleName='" + titleName + '\'' +
-                ", classify='" + classify + '\'' +
                 ", textBody='" + textBody + '\'' +
                 ", createTime='" + createTime + '\'' +
                 ", noticeTime='" + noticeTime + '\'' +

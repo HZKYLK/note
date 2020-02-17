@@ -50,7 +50,6 @@ public class edit extends base implements View.OnClickListener,
     private TextView editTime;
     private EditText editTitle;
     private EditText editBody;
-    private EditText editClassify;
     private AlertDialog.Builder dialog;
 
 
@@ -89,7 +88,7 @@ public class edit extends base implements View.OnClickListener,
         editTitle = findViewById(R.id.edit_title);
         editBody = findViewById(R.id.edit_body);
         editTime = findViewById(R.id.edit_title_time);
-        editClassify = findViewById(R.id.classify_title);
+
 
 
         btnSave.setOnClickListener(this);
@@ -119,15 +118,13 @@ public class edit extends base implements View.OnClickListener,
             String title;
             String body;
             String createDate;
-            String classify;
             title = editTitle.getText().toString();
             body = editBody.getText().toString();
             createDate = editTime.getText().toString();
-            classify = editClassify.getText().toString();
             //当返回按键被按下
             if (!isShowIng()){
                 if (!"".equals(title)||!"".equals(body)){
-                    showDialog(title,body,createDate,classify);
+                    showDialog(title,body,createDate);
                     clearDialog();
                 } else {
                     intentStart();
@@ -146,19 +143,18 @@ public class edit extends base implements View.OnClickListener,
     public void onClick(View v) {
         String title;
         String body;
-        String classify;
+
         title = editTitle.getText().toString();
         body = editBody.getText().toString();
-        classify = editClassify.getText().toString();
         switch (v.getId()){
             case R.id.button_save:
-                if (saveFunction(title,classify,body,createDate)){
+                if (saveFunction(title,body,createDate)){
                     intentStart();
                 }
                 break;
             case R.id.button_back:
                 if (!"".equals(title)||!"".equals(body)){
-                    showDialog(title,body,createDate,classify);
+                    showDialog(title,body,createDate);
                     clearDialog();
                 } else {
                     intentStart();
@@ -181,7 +177,7 @@ public class edit extends base implements View.OnClickListener,
     /*
      * 备忘录保存函数
      */
-    boolean saveFunction(String title,String classify,String body,String createDate){
+    boolean saveFunction(String title,String body,String createDate){
 
         boolean flag = true;
         if ("".equals(title)){
@@ -210,7 +206,6 @@ public class edit extends base implements View.OnClickListener,
             values.put(DatabaseHelper.RECORD_TITLE,title);
             values.put(DatabaseHelper.RECORD_BODY,body);
             values.put(DatabaseHelper.RECORD_TIME,createDate);
-            values.put(DatabaseHelper.RECORD_CLASSIFY,classify);
             if (timeSetTag){
                 //  为当前备忘录添加提醒
                 DatePicker datePicker = dialogDate.getDatePicker();
@@ -233,7 +228,7 @@ public class edit extends base implements View.OnClickListener,
      * @param body
      * @param createDate
      */
-    void showDialog(final String title, final String body, final String createDate,final String classify){
+    void showDialog(final String title, final String body, final String createDate){
         dialog = new AlertDialog.Builder(edit.this);
         dialog.setTitle("提示");
         dialog.setMessage("是否保存当前编辑内容");
@@ -241,7 +236,7 @@ public class edit extends base implements View.OnClickListener,
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        saveFunction(title,classify,body, createDate);
+                        saveFunction(title,body, createDate);
                         intentStart();
                     }
                 });

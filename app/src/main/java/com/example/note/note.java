@@ -64,9 +64,6 @@ public class note extends base implements View.OnClickListener,
                 record.setTitleName(
                         cursor.getString(cursor.getColumnIndex(DatabaseHelper.RECORD_TITLE))
                 );
-                record.setClassify(
-                        cursor.getString(cursor.getColumnIndex(DatabaseHelper.RECORD_CLASSIFY))
-                );
                 record.setTextBody(
                         cursor.getString(cursor.getColumnIndex(DatabaseHelper.RECORD_BODY))
                 );
@@ -109,7 +106,6 @@ public class note extends base implements View.OnClickListener,
         intent.putExtra(DatabaseHelper.RECORD_BODY,record.getTextBody().trim());
         intent.putExtra(DatabaseHelper.RECORD_TIME,record.getCreateTime().trim());
         intent.putExtra(DatabaseHelper.RECORD_ID,record.getId().toString().trim());
-        intent.putExtra(DatabaseHelper.RECORD_CLASSIFY,record.getId().toString().trim());
         if (record.getNoticeTime()!=null) {
             intent.putExtra(DatabaseHelper.NOTICE_TIME, record.getNoticeTime().trim());
         }
@@ -212,7 +208,6 @@ public class note extends base implements View.OnClickListener,
                 viewHolder.titleView = convertView.findViewById(R.id.list_item_title);
                 viewHolder.bodyView = convertView.findViewById(R.id.list_item_body);
                 viewHolder.timeView = convertView.findViewById(R.id.list_item_time);
-                viewHolder.classifyView = convertView.findViewById(R.id.list_classify);
                 convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
@@ -225,7 +220,6 @@ public class note extends base implements View.OnClickListener,
             viewHolder.bodyView.setText(body.length()>13?body.substring(0,12)+"...":body);
 //            viewHolder.bodyView.setText(body);
             String createTime = record.getCreateTime();
-            String classify = record.getClassify();
             return convertView;
         }
     }
@@ -234,7 +228,6 @@ public class note extends base implements View.OnClickListener,
         TextView titleView;
         TextView bodyView;
         TextView timeView;
-        TextView classifyView;
     }
 
 }

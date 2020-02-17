@@ -48,27 +48,7 @@
                 android:textSize="12sp"
                 android:hint="@string/edit_title_time_hint"
                 />
-            <LinearLayout
-                android:id="@+id/edit_classify_lay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/classify_tile"
-                    android:textSize="15sp"
-                    />
-                <EditText
-                    android:id="@+id/classify_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:hint="@string/classify_hint"
 
-                    />
-            </LinearLayout>
             <LinearLayout
                 android:id="@+id/edit_title_lay"
                 android:layout_width="match_parent"

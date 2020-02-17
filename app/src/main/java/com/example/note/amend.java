@@ -30,7 +30,6 @@ public class amend extends base implements View.OnClickListener{
     private TextView amendTime;
     private TextView amendTitle;
     private EditText amendBody;
-    private EditText amendClassify;
     private Record record;
     private AlertDialog.Builder dialog;
 
@@ -88,7 +87,6 @@ public class amend extends base implements View.OnClickListener{
         amendTitle = findViewById(R.id.amend_title);
         amendBody = findViewById(R.id.amend_body);
         amendTime = findViewById(R.id.amend_title_time);
-        amendClassify = findViewById(R.id.amend_classify);
 
         btnSave.setOnClickListener(this);
         btnBack.setOnClickListener(this);
@@ -103,7 +101,6 @@ public class amend extends base implements View.OnClickListener{
             record.setTextBody(intent.getStringExtra(DatabaseHelper.RECORD_BODY));
             record.setCreateTime(intent.getStringExtra(DatabaseHelper.RECORD_TIME));
             record.setNoticeTime(intent.getStringExtra(DatabaseHelper.NOTICE_TIME));
-            record.setClassify(intent.getStringExtra(DatabaseHelper.RECORD_CLASSIFY));
 
             amendTitle.setText(record.getTitleName());
             String str="";
@@ -112,7 +109,6 @@ public class amend extends base implements View.OnClickListener{
             }
             amendTime.setText(record.getCreateTime()+str);
             amendBody.setText(record.getTextBody());
-            amendClassify.setText(record.getClassify());
         }
     }
 
@@ -143,7 +139,6 @@ public class amend extends base implements View.OnClickListener{
             db = myDB.getWritableDatabase();
             values = new ContentValues();
             values.put(DatabaseHelper.RECORD_BODY,body);
-            values.put(DatabaseHelper.RECORD_CLASSIFY,);
             values.put(DatabaseHelper.RECORD_TIME,getNowTime());
             db.update(DatabaseHelper.TABLE_NAME_RECORD,values,DatabaseHelper.RECORD_ID +"=?",
                     new String[]{record.getId().toString()});
