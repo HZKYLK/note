@@ -30,26 +30,26 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="71dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="541dp"
+        android:layout_marginBottom="793dp"
         android:text="@string/note" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="134dp"
+        android:layout_height="74dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="470dp"
+        android:layout_marginBottom="668dp"
         android:text="@string/language" />
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="134dp"
+        android:layout_height="67dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="403dp"
+        android:layout_marginBottom="569dp"
         android:text="@string/exit" />
 
 
