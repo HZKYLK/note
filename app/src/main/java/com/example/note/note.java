@@ -42,7 +42,7 @@ public class note extends base implements View.OnClickListener,
         init();
     }
 
-    //初始化控件
+
     private void init(){
         createButton = findViewById(R.id.createButton);
         createButton.setOnClickListener(this);
@@ -77,10 +77,9 @@ public class note extends base implements View.OnClickListener,
         }
         cursor.close();
         db.close();
-        // 创建一个Adapter的实例
         myBaseAdapter = new MyBaseAdapter(this,recordList,R.layout.list_item);
         myListView.setAdapter(myBaseAdapter);
-        // 设置点击监听
+
         myListView.setOnItemClickListener(this);
         myListView.setOnItemLongClickListener(this);
     }
@@ -124,11 +123,11 @@ public class note extends base implements View.OnClickListener,
 
         final AlertDialog.Builder dialog =
                 new AlertDialog.Builder(note.this);
-        dialog.setTitle("是否删除？");
+        dialog.setTitle("delete or not？");
         String textBody = record.getTextBody();
         dialog.setMessage(
                 textBody.length()>150?textBody.substring(0,150)+"...":textBody);
-        dialog.setPositiveButton("删除",
+        dialog.setPositiveButton("delete",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -146,7 +145,7 @@ public class note extends base implements View.OnClickListener,
                         });
                     }
                 });
-        dialog.setNegativeButton("取消",
+        dialog.setNegativeButton("cancel",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -157,9 +156,6 @@ public class note extends base implements View.OnClickListener,
 
 
 
-    /**
-     * ListView展示的适配器类
-     */
     class MyBaseAdapter extends BaseAdapter {
         private List<Record> recordList;//数据集合
         private Context context;

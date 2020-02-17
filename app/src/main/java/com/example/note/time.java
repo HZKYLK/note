@@ -5,14 +5,7 @@ import android.annotation.SuppressLint;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * create_by Android Studio
- *
- * @author zouguo0212@
- * @package_name fun.zzti.memoire.util
- * @description
- * @date 2018/12/3 17:19
- */
+
 public class time {
 
     private int year;

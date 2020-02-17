@@ -84,11 +84,6 @@ public class format {
         return dateFormat.format(date);
     }
 
-    /**
-     * 字符串转日期
-     * @param str
-     * @return DATE
-     */
     @SuppressLint("SimpleDateFormat")
     public static Date myDateFormat(String str,@Nullable date dateFormatType){
         SimpleDateFormat dateFormat;
@@ -122,16 +117,6 @@ public class format {
         }
     }
 
-    /**
-     * 字符串转日期
-     * @param year
-     * @param month
-     * @param day
-     * @param hour
-     * @param minute
-     * @param dateFormatType
-     * @return
-     */
     @SuppressLint("SimpleDateFormat")
     public static Date myDateFormat(Integer year,
                                     Integer month,
@@ -178,15 +163,12 @@ public class format {
     }
 
 
-    /*
-     *  得到时间字符串，判断是否去除年份
-     *  去除规则，如果年份是当年
-     */
+
     public static String getTimeStr(Date date){
         int nowYear = new time(new Date(System.currentTimeMillis())).getYear();
         int targetYear = new time(date).getYear();
         if (nowYear == targetYear){
-            //  去除年份
+
             return myDateFormat(date, com.example.note.date.REMOVE_YEAR_TIME);
         }
         return myDateFormat(date, com.example.note.date.NORMAL_TIME);

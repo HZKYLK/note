@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">note</string>
     <string name="Cancel">Cancel</string>
@@ -22,8 +23,10 @@
     <string name="text_tile">text title</string>
     <string name="edit_hint">please enter the title</string>
     <string name="edit_title_text">new note</string>
-    <string name="create_button_name">+\nnew</string>
+    <string name="create_button_name">new</string>
     <string name="classify_tile">classify</string>
     <string name="classify_hint">please enter the classify</string>
     <string name="language">language</string>
+    <string name="word">this is the page to change the language</string>
+    <string name="exit">exit</string>
 </resources>

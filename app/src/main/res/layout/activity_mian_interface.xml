@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="470dp"
-        android:text="@string/setting" />
+        android:text="@string/language" />
 
     <Button
         android:id="@+id/button5"
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="403dp"
-        android:text="exit" />
+        android:text="@string/exit" />
 
 
 </RelativeLayout>

@@ -16,7 +16,7 @@ public class setting extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_language);
+        setContentView(R.layout.activity_setting);
         Contants.activityList.add(this);
         switchLanguage(Contants.setting);
     }

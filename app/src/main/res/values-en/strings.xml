@@ -1,0 +1,31 @@
+<resources>
+	<string name="app_name">笔记</string>
+	<string name="Cancel">取消</string>
+	<string name="Login_System">登录系统</string>
+	<string name="Content">连接</string>
+	<string name="Enter_Name">输入账号</string>
+	<string name="Password">密码</string>
+	<string name="Attempts_Left">剩余次数</string>
+	<string name="login">登陆</string>
+	<string name="setting">设置</string>
+	<string name="note">笔记</string>
+	<string name="edit">编辑</string>
+	<string name="title">标题</string>
+	<string name="description">描述</string>
+	<string name="date">日期</string>
+	<string name="time">时间</string>
+	<string name="sure">确认</string>
+	<string name="button_save">保存</string>
+	<string name="button_back">返回</string>
+	<string name="edit_body_hint">请输入内容</string>
+	<string name="edit_title_time_hint">这个地方显示时间</string>
+	<string name="text_tile">文字标题</string>
+	<string name="edit_hint">请输入标题</string>
+	<string name="edit_title_text">新的笔记</string>
+	<string name="create_button_name">新</string>
+	<string name="classify_tile">分类</string>
+	<string name="classify_hint">请输入分类</string>
+	<string name="language">语言</string>
+	<string name="word">这是改变语言的页面</string>
+	<string name="exit">退出</string>
+</resources>

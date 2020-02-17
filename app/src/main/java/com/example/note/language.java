@@ -58,7 +58,7 @@ public class language extends Activity {
         for (Activity activity: Contants.activityList){
             activity.finish();
         }
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, mian_interface.class));
 
 
     }
