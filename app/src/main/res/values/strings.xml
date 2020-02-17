@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">note</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Login_System">login system</string>
+    <string name="Content">Content</string>
+    <string name="Enter_Name">Enter Name</string>
+    <string name="Password">Password</string>
+    <string name="Attempts_Left">Attempts Left:</string>
+    <string name="login">login</string>
+    <string name="setting">setting</string>
+    <string name="note">note</string>
+    <string name="edit">edit</string>
+    <string name="title">title</string>
+    <string name="description">description</string>
+    <string name="date">date</string>
+    <string name="time">time</string>
+    <string name="sure">sure</string>
+    <string name="button_save">save</string>
+    <string name="button_back">back</string>
+    <string name="edit_body_hint">Please enter the content</string>
+    <string name="edit_title_time_hint">this place show the time</string>
+    <string name="text_tile">text title</string>
+    <string name="edit_hint">please enter the title</string>
+    <string name="edit_title_text">new note</string>
+    <string name="create_button_name">+\nnew</string>
+    <string name="classify_tile">classify</string>
+    <string name="classify_hint">please enter the classify</string>
+</resources>
